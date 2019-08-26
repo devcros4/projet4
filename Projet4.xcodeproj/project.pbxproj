@@ -12,7 +12,23 @@
 		2741F99122FE0E9D00766F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2741F98F22FE0E9D00766F75 /* Main.storyboard */; };
 		2741F99322FE0EA100766F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2741F99222FE0EA100766F75 /* Assets.xcassets */; };
 		2741F99622FE0EA100766F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2741F99422FE0EA100766F75 /* LaunchScreen.storyboard */; };
+		2741F9A02300556800766F75 /* UIView+AsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741F99F2300556800766F75 /* UIView+AsImage.swift */; };
+		2741F9A42300BA2000766F75 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2741F9A32300BA2000766F75 /* Delm-Medium.otf */; };
+		2741F9A62300BA2D00766F75 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2741F9A52300BA2D00766F75 /* ThirstySoftRegular.otf */; };
+		2741F9AE2300C2EF00766F75 /* Projet4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741F9AD2300C2EF00766F75 /* Projet4UITests.swift */; };
+		2741F9B62300C35000766F75 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741F9B52300C35000766F75 /* SnapshotHelper.swift */; };
+		76B6E7F0230BEB1200EA3587 /* UIView+CornerRaduis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B6E7EF230BEB1200EA3587 /* UIView+CornerRaduis.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2741F9B02300C2F000766F75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2741F98022FE0E9C00766F75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2741F98722FE0E9D00766F75;
+			remoteInfo = Projet4;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2741F98822FE0E9D00766F75 /* Projet4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projet4.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +38,25 @@
 		2741F99222FE0EA100766F75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2741F99522FE0EA100766F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2741F99722FE0EA100766F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2741F99F2300556800766F75 /* UIView+AsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AsImage.swift"; sourceTree = "<group>"; };
+		2741F9A32300BA2000766F75 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		2741F9A52300BA2D00766F75 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		2741F9AB2300C2EF00766F75 /* Projet4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Projet4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2741F9AD2300C2EF00766F75 /* Projet4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projet4UITests.swift; sourceTree = "<group>"; };
+		2741F9AF2300C2EF00766F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2741F9B52300C35000766F75 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		76B6E7EF230BEB1200EA3587 /* UIView+CornerRaduis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRaduis.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2741F98522FE0E9D00766F75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2741F9A82300C2EF00766F75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				2741F98A22FE0E9D00766F75 /* Projet4 */,
+				2741F9AC2300C2EF00766F75 /* Projet4UITests */,
 				2741F98922FE0E9D00766F75 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				2741F98822FE0E9D00766F75 /* Projet4.app */,
+				2741F9AB2300C2EF00766F75 /* Projet4UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +93,22 @@
 				2741F99222FE0EA100766F75 /* Assets.xcassets */,
 				2741F99422FE0EA100766F75 /* LaunchScreen.storyboard */,
 				2741F99722FE0EA100766F75 /* Info.plist */,
+				2741F99F2300556800766F75 /* UIView+AsImage.swift */,
+				76B6E7EF230BEB1200EA3587 /* UIView+CornerRaduis.swift */,
+				2741F9A32300BA2000766F75 /* Delm-Medium.otf */,
+				2741F9A52300BA2D00766F75 /* ThirstySoftRegular.otf */,
 			);
 			path = Projet4;
+			sourceTree = "<group>";
+		};
+		2741F9AC2300C2EF00766F75 /* Projet4UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2741F9AD2300C2EF00766F75 /* Projet4UITests.swift */,
+				2741F9AF2300C2EF00766F75 /* Info.plist */,
+				2741F9B52300C35000766F75 /* SnapshotHelper.swift */,
+			);
+			path = Projet4UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +131,24 @@
 			productReference = 2741F98822FE0E9D00766F75 /* Projet4.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2741F9AA2300C2EF00766F75 /* Projet4UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2741F9B22300C2F000766F75 /* Build configuration list for PBXNativeTarget "Projet4UITests" */;
+			buildPhases = (
+				2741F9A72300C2EF00766F75 /* Sources */,
+				2741F9A82300C2EF00766F75 /* Frameworks */,
+				2741F9A92300C2EF00766F75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2741F9B12300C2F000766F75 /* PBXTargetDependency */,
+			);
+			name = Projet4UITests;
+			productName = Projet4UITests;
+			productReference = 2741F9AB2300C2EF00766F75 /* Projet4UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +161,10 @@
 				TargetAttributes = {
 					2741F98722FE0E9D00766F75 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					2741F9AA2300C2EF00766F75 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 2741F98722FE0E9D00766F75;
 					};
 				};
 			};
@@ -113,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				2741F98722FE0E9D00766F75 /* Projet4 */,
+				2741F9AA2300C2EF00766F75 /* Projet4UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -124,7 +194,16 @@
 			files = (
 				2741F99622FE0EA100766F75 /* LaunchScreen.storyboard in Resources */,
 				2741F99322FE0EA100766F75 /* Assets.xcassets in Resources */,
+				2741F9A62300BA2D00766F75 /* ThirstySoftRegular.otf in Resources */,
+				2741F9A42300BA2000766F75 /* Delm-Medium.otf in Resources */,
 				2741F99122FE0E9D00766F75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2741F9A92300C2EF00766F75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,11 +215,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				2741F98E22FE0E9D00766F75 /* ViewController.swift in Sources */,
+				76B6E7F0230BEB1200EA3587 /* UIView+CornerRaduis.swift in Sources */,
+				2741F9A02300556800766F75 /* UIView+AsImage.swift in Sources */,
 				2741F98C22FE0E9D00766F75 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2741F9A72300C2EF00766F75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2741F9AE2300C2EF00766F75 /* Projet4UITests.swift in Sources */,
+				2741F9B62300C35000766F75 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2741F9B12300C2F000766F75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2741F98722FE0E9D00766F75 /* Projet4 */;
+			targetProxy = 2741F9B02300C2F000766F75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2741F98F22FE0E9D00766F75 /* Main.storyboard */ = {
@@ -283,15 +381,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Projet4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Projet4;
+				PRODUCT_BUNDLE_IDENTIFIER = delcros.com.Projet4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,15 +399,52 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Projet4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Projet4;
+				PRODUCT_BUNDLE_IDENTIFIER = delcros.com.Projet4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2741F9B32300C2F000766F75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Projet4UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Projet4UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Projet4;
+			};
+			name = Debug;
+		};
+		2741F9B42300C2F000766F75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Projet4UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Projet4UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Projet4;
 			};
 			name = Release;
 		};
@@ -329,6 +465,15 @@
 			buildConfigurations = (
 				2741F99B22FE0EA100766F75 /* Debug */,
 				2741F99C22FE0EA100766F75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2741F9B22300C2F000766F75 /* Build configuration list for PBXNativeTarget "Projet4UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2741F9B32300C2F000766F75 /* Debug */,
+				2741F9B42300C2F000766F75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
