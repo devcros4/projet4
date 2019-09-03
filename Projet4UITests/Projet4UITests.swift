@@ -31,7 +31,9 @@ class Projet4UITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     func testScreenShot() {
-        snapshot("ok")
+        snapshot("portrait")
+        XCUIDevice.shared.orientation = .landscapeLeft
+        snapshot("landscape")
     }
     
     override func setUp() {
