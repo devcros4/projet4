@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    
+    /// adding a Radius corner parameter in the storyboard for the UIVIew to choose the rounded angle value
     @IBInspectable
     var cornerRadius: CGFloat {
         get {

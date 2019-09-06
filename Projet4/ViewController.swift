@@ -9,13 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    // MARK: Attribut
     @IBOutlet weak var btnLayer1: UIButton!
     @IBOutlet weak var btnLayer2: UIButton!
     @IBOutlet weak var btnLayer3: UIButton!
-    
-    @IBOutlet weak var btnLargeTop: UIButton!
-    @IBOutlet weak var btnLargeBottom: UIButton!
     @IBOutlet weak var btnLeftBottom: UIButton!
     @IBOutlet weak var btnRightBottom: UIButton!
     @IBOutlet weak var btnLeftTop: UIButton!
@@ -27,14 +24,18 @@ class ViewController: UIViewController {
     
     
     
-    // ici le contrôleur appareil photo ou album
     var imagePicker: UIImagePickerController!
+    
     var btnImage: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
+    /// change direction of gesture based on device orientation
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
             self.swipeGesture.direction = .left
@@ -42,19 +43,14 @@ class ViewController: UIViewController {
             self.swipeGesture.direction = .up
         }
     }
-    /// MARK: Actions
+    // MARK: Actions
+    
+    /// display the library to choose an image
     @IBAction func choiceImage(_ sender: UIButton) {
         self.btnImage = sender
-        imagePicker = UIImagePickerController() // création de l'instance du contrôleur
-        
-        imagePicker.delegate = self // recevoir les événements du composant UIImagePickerController
-        
-        //imagePicker.cameraOverlayView =
-        
-        // ici il s'agira de l'album photo
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
-        
-        // on affiche l'album
         present( imagePicker, animated:true, completion:nil )
     }
     
@@ -62,22 +58,18 @@ class ViewController: UIViewController {
         sender.isSelected = true
         self.btnLayer2.isSelected = false
         self.btnLayer3.isSelected = false
-        self.btnLargeTop.isHidden = false
         self.btnLeftBottom.isHidden = false
         self.btnRightBottom.isHidden = false
-        self.btnLargeBottom.isHidden = true
-        self.btnLeftTop.isHidden = true
+        self.btnLeftTop.isHidden = false
         self.btnRightTop.isHidden = true
     }
     @IBAction func selectLayer2(_ sender: UIButton) {
         sender.isSelected = true
         self.btnLayer1.isSelected = false
         self.btnLayer3.isSelected = false
-        self.btnLargeBottom.isHidden = false
         self.btnLeftTop.isHidden = false
         self.btnRightTop.isHidden = false
-        self.btnLargeTop.isHidden = true
-        self.btnLeftBottom.isHidden = true
+        self.btnLeftBottom.isHidden = false
         self.btnRightBottom.isHidden = true
     }
     @IBAction func selectLayer3(_ sender: UIButton) {
@@ -88,8 +80,6 @@ class ViewController: UIViewController {
         self.btnRightBottom.isHidden = false
         self.btnLeftTop.isHidden = false
         self.btnRightTop.isHidden = false
-        self.btnLargeTop.isHidden = true
-        self.btnLargeBottom.isHidden = true
     }
     
     @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
@@ -100,8 +90,9 @@ class ViewController: UIViewController {
         }
          self.shareImage(image: self.contentView.asImage())
     }
+    // MARK: Private function
     
-    /// MARK: Private
+    /// allows to share an image
     private func shareImage(image: UIImage) {
         // set up activity view controller
         let imageToShare = [ image ]
@@ -151,7 +142,7 @@ extension ViewController: UIImagePickerControllerDelegate,UINavigationController
         }
     }
 
-    
+    /// when canceling the selection of an image
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         imagePicker.dismiss(animated: true) {
             print("annulation")
