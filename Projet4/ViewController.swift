@@ -35,6 +35,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    ///
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask { get { return .all } }
+    
     /// change direction of gesture based on device orientation
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
