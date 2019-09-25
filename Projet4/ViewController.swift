@@ -22,20 +22,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgSwipeDirection: UIImageView!
     @IBOutlet weak var swipeGesture: UISwipeGestureRecognizer!
     
-    
-    
     var imagePicker: UIImagePickerController!
-    
     var btnImage: UIButton!
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
-    ///
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask { get { return .all } }
     
     /// change direction of gesture based on device orientation
@@ -46,6 +35,7 @@ class ViewController: UIViewController {
             self.swipeGesture.direction = .up
         }
     }
+    
     // MARK: Actions
     
     /// display the library to choose an image
@@ -66,6 +56,7 @@ class ViewController: UIViewController {
         self.btnLeftTop.isHidden = false
         self.btnRightTop.isHidden = true
     }
+    
     @IBAction func selectLayer2(_ sender: UIButton) {
         sender.isSelected = true
         self.btnLayer1.isSelected = false
@@ -75,6 +66,7 @@ class ViewController: UIViewController {
         self.btnLeftBottom.isHidden = false
         self.btnRightBottom.isHidden = true
     }
+    
     @IBAction func selectLayer3(_ sender: UIButton) {
         sender.isSelected = true
         btnLayer1.isSelected = false
@@ -91,8 +83,9 @@ class ViewController: UIViewController {
         } else {
             self.moveViewVertically()
         }
-         self.shareImage(image: self.contentView.asImage())
+        self.shareImage(image: self.contentView.asImage())
     }
+    
     // MARK: Private function
     
     /// allows to share an image
@@ -101,22 +94,19 @@ class ViewController: UIViewController {
         let imageToShare = [ image ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
-        
         // exclude some activity types from the list (optional)
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
-        
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
-        
         activityViewController.completionWithItemsHandler = {(UIActivityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
             self.moveViewToOrigin()
         }
     }
     /// move vertically contentView outside the screen
     private func moveViewVertically() {
-            UIView.animate(withDuration: 0.5) {
-                self.contentView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
-            }
+        UIView.animate(withDuration: 0.5) {
+            self.contentView.transform = CGAffineTransform(translationX: 0, y: -self.view.frame.height)
+        }
     }
     /// replace contentView in old position
     private func moveViewToOrigin() {
@@ -126,11 +116,11 @@ class ViewController: UIViewController {
     }
     /// move horizontally contentView outside the screen
     private func moveViewHorizontally() {
-            UIView.animate(withDuration: 0.5) {
-                self.contentView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
-            }
+        UIView.animate(withDuration: 0.5) {
+            self.contentView.transform = CGAffineTransform(translationX: -self.view.frame.width, y: 0)
+        }
     }
-
+    
 }
 
 extension ViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -141,10 +131,10 @@ extension ViewController: UIImagePickerControllerDelegate,UINavigationController
         
         // affichage de la photo
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                   self.btnImage.setImage(image, for: .normal)
+            self.btnImage.setImage(image, for: .normal)
         }
     }
-
+    
     /// when canceling the selection of an image
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         imagePicker.dismiss(animated: true) {
